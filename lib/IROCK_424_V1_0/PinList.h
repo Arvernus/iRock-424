@@ -47,7 +47,7 @@
     Pin(PinDip2,            PC10,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 2") \
     Pin(PinDip3,            PC11,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 3") \
     Pin(PinAD_C1,           PA7,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 5 voltage") \
-    Pin(PinAD_C2,           PA5,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 6 voltage") \
+    Pin(PinAD_C2,           PA6,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 6 voltage") \
     Pin(PinAD_C3,           PA4,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 7 voltage") \
     Pin(PinAD_C4,           PA3,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
     Pin(PinAD_C5,           PA2,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
