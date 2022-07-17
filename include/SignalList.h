@@ -66,6 +66,6 @@
   Signal(LED1,                DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status LED 1 on PCB") \
   Signal(LED2,                DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status LED 2 on PCB") \
   Signal(LED3,                DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status LED 3 on PCB") \
-  Signal(Status_OVP,          DigitalOutput,        "",   1.0,    0.0,      0,    10,     0,        false,  false,  "Status of the Over Voltage Protection") \
-  Signal(Status_LVP,          DigitalOutput,        "",   1.0,    0.0,      0,    10,     0,        false,  false,  "Status of the Low Voltage Protection")
+  Signal(Status_OVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status of the Over Voltage Protection") \
+  Signal(Status_LVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status of the Low Voltage Protection")
 // clang-format on
