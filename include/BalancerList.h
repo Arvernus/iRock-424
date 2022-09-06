@@ -14,7 +14,7 @@
                                      Signals::GetAnalogValue(AD_C5) + \
                                      Signals::GetAnalogValue(AD_C6) + \
                                      Signals::GetAnalogValue(AD_C7) + \
-                                     Signals::GetAnalogValue(AD_C8)) > 27)
+                                     Signals::GetAnalogValue(AD_C8)) > 26.9)
 
 /**
  * @brief list of all signals and their max and mins that will trigger final shut off
