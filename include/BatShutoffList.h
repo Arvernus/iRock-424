@@ -16,8 +16,7 @@
 //                 Name     Warning Final
 #define BatShutOffTypeList \
     BatShutOffType(Ovp,     OVP,    false) \
-    BatShutOffType(Lvp,     LVP,    false) \
-// clang-format on
+    BatShutOffType(Lvp,     LVP,    false) // clang-format on
 
 /**
  * @brief list of all signals and there max and mins that will trigger shut off
@@ -61,10 +60,10 @@
  * @param isSSR defines if Actor is a Solid state relay
  */
 // clang-format off
-//                  ID              Type        inverted    Lock    isSSR
+//                  ID              Type        inverted    Lock    inverted
 #define BatShutOffActorList \
-    BatShutOffActor(Status_OVP,     Ovp,        false,      0,      false) \
-    BatShutOffActor(LED1,           Ovp,        false,      0,      false) \
-    BatShutOffActor(Status_LVP,     Lvp,        false,      0,      false) \
-    BatShutOffActor(LED2,           Lvp,        true,       0,      false)
+    BatShutOffActor(Status_OVP,     Ovp,        false) \
+    BatShutOffActor(LED1,           Ovp,        false) \
+    BatShutOffActor(Status_LVP,     Lvp,        false) \
+    BatShutOffActor(LED2,           Lvp,        true)
 // clang-format on
