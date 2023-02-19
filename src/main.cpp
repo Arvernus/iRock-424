@@ -33,7 +33,7 @@ void setup()
   Cli::start(greet);
   taskManager.yieldForMicros(5 * 1000 * 1000);
   BatShutOff::setup(1000);
-  Balancer::setup(10000, 7, 2000);
+  Balancer::setup(10000, 8, 2000, Balancer::Single);
 }
 
 void loop()
