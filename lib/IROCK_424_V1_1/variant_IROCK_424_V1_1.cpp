@@ -10,7 +10,7 @@
  *
  *******************************************************************************
  */
-#if defined(ARDUINO_IROCK_424_V1_0)
+#if defined(ARDUINO_IROCK_424_V1_1)
 #include "pins_arduino.h"
 
 // Pin number
@@ -158,4 +158,4 @@ extern "C"
 }
 #endif
 
-#endif /* ARDUINO_IROCK_424_V1_0 */
+#endif /* ARDUINO_IROCK_424_V1_1 */

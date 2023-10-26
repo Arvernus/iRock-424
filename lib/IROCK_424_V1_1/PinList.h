@@ -1,7 +1,7 @@
 /**
  * @file PinList.h
  * @author Joscha Wagner (joscha@nebensound.com)
- * @brief Definition of all Pins for iRock 424 v1.0 hardware
+ * @brief Definition of all Pins for iRock 424 v1.1 hardware
  *
  * Copyright (c) Nebensound GmbH 2021
  */

@@ -1,9 +1,9 @@
 /**
  * @file PinList.h
  * @author Joscha Wagner (joscha@nebensound.com)
- * @brief Definition of all Pins for iRock 424 v1.0 hardware
+ * @brief Definition of all Pins for iRock 424 v1.11 hardware
  *
- * Copyright (c) Nebensound GmbH 2021
+ * Copyright (c) Nebensound GmbH 2023
  */
 
 // I2C definitions
