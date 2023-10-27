@@ -1,9 +1,9 @@
 /**
- * @file BatShutOffTriggersTest.h
+ * @file BatShutoffList.h
  * @author Joscha Wagner (joscha@nebensound.com)
  * @brief defines the Signals and limits used
  *
- * Copyright (c) Nebensound GmbH 2021
+ * Copyright (c) Nebensound GmbH 2023
  *
  */
 
@@ -14,11 +14,11 @@
  */
 // clang-format off
 //                 Name     Warning Final
-#define BatShutOffTypeList \
-    BatShutOffType(Ovp,     OVP,    false) \
-    BatShutOffType(Lvp,     LVP,    false) \
-    BatShutOffType(Final,   FINAL,  true) \
-    BatShutOffType(Ocp,     OCP,    false)
+#define BatShutoffTypeList \
+    BatShutoffType(Ovp,     OVP,    false) \
+    BatShutoffType(Lvp,     LVP,    false) \
+    BatShutoffType(Final,   FINAL,  true) \
+    BatShutoffType(Ocp,     OCP,    false)
 // clang-format on
 
 /**
@@ -35,19 +35,19 @@
  */
 // clang-format off
 //                    ID                Type    Mode        Min     Min_Release Max     Max_Release
-#define BatShutOffTriggerList \
-    BatShutOffTrigger(AD_C1,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C2,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C3,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C4,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C1,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C2,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C3,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C4,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C1,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C2,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C3,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C4,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0)
+#define BatShutoffTriggerList \
+    BatShutoffTrigger(AD_C1,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
+    BatShutoffTrigger(AD_C2,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
+    BatShutoffTrigger(AD_C3,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
+    BatShutoffTrigger(AD_C4,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
+    BatShutoffTrigger(AD_C1,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C2,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C3,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C4,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C1,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
+    BatShutoffTrigger(AD_C2,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
+    BatShutoffTrigger(AD_C3,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
+    BatShutoffTrigger(AD_C4,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0)
 // clang-format on
 
 /**
@@ -60,10 +60,10 @@
  */
 // clang-format off
 //                  ID              Type        inverted
-#define BatShutOffActorList \
-    BatShutOffActor(Status_OVP,     Ovp,        false) \
-    BatShutOffActor(LED1,           Ovp,        false) \
-    BatShutOffActor(Status_LVP,     Lvp,        false) \
-    BatShutOffActor(LED2,           Lvp,        true) \
-    BatShutOffActor(Status_FinalSO, Final,      false)
+#define BatShutoffActorList \
+    BatShutoffActor(Status_OVP,     Ovp,        false) \
+    BatShutoffActor(LED1,           Ovp,        false) \
+    BatShutoffActor(Status_LVP,     Lvp,        false) \
+    BatShutoffActor(LED2,           Lvp,        true) \
+    BatShutoffActor(Status_FinalSO, Final,      false)
 // clang-format on
