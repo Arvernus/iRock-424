@@ -3,7 +3,7 @@
 #include <TaskManager.h>
 #include <MappingIO.h>
 #include <CLI.h>
-#include <BatShutoff.h>
+#include <BatShutOff.h>
 #include <Balancer.h>
 
 void blink()
