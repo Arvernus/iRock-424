@@ -3,7 +3,7 @@
 #include <TaskManager.h>
 #include <MappingIO.h>
 #include <CLI.h>
-#include <BatShutOff.h>
+#include <BatShutoff.h>
 #include <Balancer.h>
 
 void blink()
@@ -34,7 +34,7 @@ void setup()
   greet = greet + Mapping::ActualMap();
   Cli::start(greet);
   taskManager.yieldForMicros(5 * 1000 * 1000);
-  BatShutOff::setup(1000);
+  BatShutoff::setup(1000);
   Balancer::setup(10000, 4, 2000, Balancer::Single);
 }
 
