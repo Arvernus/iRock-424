@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Arvernus/PlatformIOGithubActions/main/schemas/project.json",
   "name": "IROCK_2424",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "iRock OS for Hardware 424",
   "authors": [
     {
@@ -10,10 +10,12 @@
       "maintainer": true
     },
     {
-      "name": "Andreas Wagner"
+      "name": "Andreas Wagner",
+      "email": "andreas.wagner@me.com"
     },
     {
-      "name": "Donald Dilocker"
+      "name": "Donald Dilocker",
+      "email": "donald@dilocker.com"
     }
   ]
 }
