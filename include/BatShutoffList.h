@@ -40,14 +40,26 @@
     BatShutoffTrigger(AD_C2,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
     BatShutoffTrigger(AD_C3,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
     BatShutoffTrigger(AD_C4,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C5,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C6,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C7,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C8,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
     BatShutoffTrigger(AD_C1,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
     BatShutoffTrigger(AD_C2,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
     BatShutoffTrigger(AD_C3,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
     BatShutoffTrigger(AD_C4,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C5,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C6,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C7,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C8,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
     BatShutoffTrigger(AD_C1,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
     BatShutoffTrigger(AD_C2,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
     BatShutoffTrigger(AD_C3,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
-    BatShutoffTrigger(AD_C4,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0)
+    BatShutoffTrigger(AD_C4,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C5,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C6,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C7,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C8,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0)
 // clang-format on
 
 /**
