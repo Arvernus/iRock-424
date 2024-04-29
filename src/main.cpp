@@ -15,6 +15,7 @@ void blink()
   taskManager.scheduleOnce(time, blink);
 }
 
+// cppcheck-suppress unusedFunction
 void setup()
 {
   Cli::setup(115200, true, true, true, true);
@@ -38,6 +39,7 @@ void setup()
   Balancer::setup(10000, 4, 2000, Balancer::Single);
 }
 
+// cppcheck-suppress unusedFunction
 void loop()
 {
   taskManager.runLoop();
