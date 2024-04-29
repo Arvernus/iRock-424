@@ -6,8 +6,12 @@
  * Copyright (c) Nebensound GmbH 2023
  *
  */
-#pragma once
+#ifndef MAIN_H
+#define MAIN_H
+
 #ifndef SW_VERSION
 #define SW_VERSION DEVELOPERVERSION
 #endif // SW_VERSION
 #include <HardwareVersion.h>
+
+#endif // MAIN_H

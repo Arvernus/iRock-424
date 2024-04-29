@@ -6,6 +6,8 @@
  * Copyright (c) Nebensound GmbH 2023
  *
  */
+#ifndef BATSHUTOFFLIST_H
+#define BATSHUTOFFLIST_H
 
 /**
  * @brief list of all sorts off shutoff possible
@@ -79,3 +81,4 @@
     BatShutoffActor(LED2,           Lvp,        true) \
     BatShutoffActor(Status_FinalSO, Final,      false)
 // clang-format on
+#endif // BATSHUTOFFLIST_H

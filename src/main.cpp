@@ -10,7 +10,9 @@ void blink()
 {
   unsigned int time = 1000;
   if (Signals::GetDigitalValue(Status_FinalSO))
+  {
     time = 100;
+  }
   Signals::SetDigitalValue(LED3, !Signals::GetDigitalValue(LED3));
   taskManager.scheduleOnce(time, blink);
 }
@@ -22,8 +24,8 @@ void setup()
   Signals::Init();
   // ModBus::setup();
   blink();
-  String greet;
-  greet = "### Welcome to iRock ###\nYou are running, iRock OS ";
+  // NOLINTBEGIN (cppcoreguidelines-init-variables,cppcoreguidelines-macro-usage)
+  String greet = "### Welcome to iRock ###\nYou are running, iRock OS ";
 #define stringer(s) #s
 #define str(s) stringer(s)
   greet = greet + str(SW_VERSION);
@@ -31,10 +33,11 @@ void setup()
   greet = greet + str(HW_VERSION);
 #undef str
 #undef stringer
+  // NOLINTEND
   greet = greet + " in Mapping-Mode ";
   greet = greet + Mapping::ActualMap();
   Cli::start(greet);
-  taskManager.yieldForMicros(5 * 1000 * 1000);
+  taskManager.yieldForMicros(5000000);
   BatShutoff::setup(1000);
   Balancer::setup(10000, 4, 2000, Balancer::Single);
 }
