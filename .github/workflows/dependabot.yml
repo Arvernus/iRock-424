@@ -8,6 +8,7 @@ on:
 
 jobs:
   dependabot:
+    if: ${{ github.ref != 'refs/heads/main' }}  # Führt den Job nicht aus, wenn der Branch 'main' ist
     uses: Arvernus/PlatformIOGithubActions/.github/workflows/dependabot.yaml@main
     secrets:
       PLATFORMIO_AUTH_TOKEN: ${{ secrets.PLATFORMIO_AUTH_TOKEN }}
