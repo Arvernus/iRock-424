@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Arvernus/PlatformIOGithubActions/main/schemas/project.json",
-  "name": "IROCK_2424",
+  "name": "IROCK_424",
   "version": "1.0.0",
   "description": "iRock OS for Hardware 424",
   "authors": [
