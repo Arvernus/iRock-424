@@ -19,8 +19,8 @@
 #define BatShutoffTypeList \
     BatShutoffType(Ovp,     OVP,    false) \
     BatShutoffType(Lvp,     LVP,    false) \
-    BatShutoffType(Final,   FINAL,  true) \
-    BatShutoffType(Ocp,     OCP,    false)
+    BatShutoffType(Ocp,     OCP,    false) \
+    BatShutoffType(Final,   FINAL,  true)
 // clang-format on
 
 /**
