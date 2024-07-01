@@ -1,11 +1,13 @@
 /**
- * @file BatShutOffTriggersTest.h
+ * @file BatShutoffList.h
  * @author Joscha Wagner (joscha@nebensound.com)
  * @brief defines the Signals and limits used
  *
- * Copyright (c) Nebensound GmbH 2021
+ * Copyright (c) Nebensound GmbH 2023
  *
  */
+#ifndef BATSHUTOFFLIST_H
+#define BATSHUTOFFLIST_H
 
 /**
  * @brief list of all sorts off shutoff possible
@@ -14,11 +16,11 @@
  */
 // clang-format off
 //                 Name     Warning Final
-#define BatShutOffTypeList \
-    BatShutOffType(Ovp,     OVP,    false) \
-    BatShutOffType(Lvp,     LVP,    false) \
-    BatShutOffType(Final,   FINAL,  true) \
-    BatShutOffType(Ocp,     OCP,    false)
+#define BatShutoffTypeList \
+    BatShutoffType(Ovp,     OVP,    false) \
+    BatShutoffType(Lvp,     LVP,    false) \
+    BatShutoffType(Ocp,     OCP,    false) \
+    BatShutoffType(Final,   FINAL,  true)
 // clang-format on
 
 /**
@@ -35,19 +37,31 @@
  */
 // clang-format off
 //                    ID                Type    Mode        Min     Min_Release Max     Max_Release
-#define BatShutOffTriggerList \
-    BatShutOffTrigger(AD_C1,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C2,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C3,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C4,            Ovp,    MaxCompare, 0,      0,          3.9,    3.65) \
-    BatShutOffTrigger(AD_C1,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C2,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C3,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C4,            Lvp,    MinCompare, 2.8,    3.2,        0,      0) \
-    BatShutOffTrigger(AD_C1,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C2,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C3,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0) \
-    BatShutOffTrigger(AD_C4,            Final,  AllCompare, 2.7,    2.8,        4.0,    4.0)
+#define BatShutoffTriggerList \
+    BatShutoffTrigger(AD_C1,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C2,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C3,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C4,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C5,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C6,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C7,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C8,            Ovp,    MaxCompare, 0,      0,          3.75,    3.60) \
+    BatShutoffTrigger(AD_C1,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C2,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C3,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C4,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C5,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C6,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C7,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C8,            Lvp,    MinCompare, 2.9,    3.2,        0,      0) \
+    BatShutoffTrigger(AD_C1,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C2,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C3,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C4,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C5,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C6,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C7,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0) \
+    BatShutoffTrigger(AD_C8,            Final,  AllCompare, 2.8,    3.2,        3.85,    4.0)
 // clang-format on
 
 /**
@@ -60,10 +74,11 @@
  */
 // clang-format off
 //                  ID              Type        inverted
-#define BatShutOffActorList \
-    BatShutOffActor(Status_OVP,     Ovp,        false) \
-    BatShutOffActor(LED1,           Ovp,        false) \
-    BatShutOffActor(Status_LVP,     Lvp,        false) \
-    BatShutOffActor(LED2,           Lvp,        true) \
-    BatShutOffActor(Status_FinalSO, Final,      false)
+#define BatShutoffActorList \
+    BatShutoffActor(Status_OVP,     Ovp,        false) \
+    BatShutoffActor(LED1,           Ovp,        false) \
+    BatShutoffActor(Status_LVP,     Lvp,        false) \
+    BatShutoffActor(LED2,           Lvp,        true) \
+    BatShutoffActor(Status_FinalSO, Final,      false)
 // clang-format on
+#endif // BATSHUTOFFLIST_H

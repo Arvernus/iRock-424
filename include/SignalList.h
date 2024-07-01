@@ -5,6 +5,8 @@
  *
  * Copyright (c) Nebensound GmbH 2021
  */
+#ifndef SIGNALLIST_H
+#define SIGNALLIST_H
 
 /*
 * A signal is defined by the following parameters:
@@ -70,3 +72,4 @@
   Signal(Status_OVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status of the Over Voltage Protection") \
   Signal(Status_LVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  "Status of the Low Voltage Protection")
 // clang-format on
+#endif // SIGNALLIST_H

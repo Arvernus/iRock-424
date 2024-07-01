@@ -49,8 +49,8 @@
     Pin(PinAD_C4,           PA4,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 4 voltage") \
     Pin(PinAD_C5,           PA2,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 5 voltage") \
     Pin(PinAD_C6,           PA0,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 6 voltage") \
-    Pin(PinAD_C7,           PH1,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 7 voltage") \
-    Pin(PinAD_C8,           PH0,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
+    Pin(PinAD_C7,           PC3,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 7 voltage") \
+    Pin(PinAD_C8,           PC0,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
     Pin(PinGPO_LVP,         PC9,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO LVP") \
     Pin(PinGPO_OVP,         PB6,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO UVP") \
     Pin(PinBU_C1,           PA8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 1") \
@@ -59,8 +59,8 @@
     Pin(PinBU_C4,           PC6,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 4") \
     Pin(PinBU_C5,           PB15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 5") \
     Pin(PinBU_C6,           PB2,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 6") \
-    Pin(PinBU_C7,           PC14,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 7") \
-    Pin(PinBU_C8,           PC13,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 8") \
+    Pin(PinBU_C7,           PH1,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 7") \
+    Pin(PinBU_C8,           PH0,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 8") \
     Pin(PinLED1,            PC13,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 1") \
     Pin(PinLED2,            PC14,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 2") \
     Pin(PinLED3,            PC15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 3")
