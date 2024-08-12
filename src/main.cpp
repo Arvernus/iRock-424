@@ -34,7 +34,7 @@ void calculateBatteryVoltage()
 }
 void calculateSoc()
 {
-  float voltage = Signals::GetAnalogValue(Signals::SignalId::AD_C_All) / NUMBER_OF_CELLS;
+  float voltage = Signals::GetAnalogValue(Signals::SignalId::AD_C_All) / float(NUMBER_OF_CELLS);
 
   float Soc;
 
@@ -48,7 +48,7 @@ void calculateSoc()
   }
   else
   {
-    Soc = (voltage - 2.8) / 0.5 * 100;
+    Soc = ((voltage - 2.8) / 0.5) * 100;
   }
   Signals::SetAnalogValue(Signals::SignalId::Soc, Soc);
 }
@@ -57,6 +57,10 @@ void calculateSoc()
 // Function to setup the system
 void setup()
 {
+  /**
+   * ACHTUNG: hiermit kann das Dateisystem neu angelegt werden.
+   */
+  // Store::reset(true);
   Cli::setup(115200, true, true, true, true);
   Signals::Init();
   // ModBus::setup();
@@ -66,13 +70,19 @@ void setup()
 #define stringer(s) #s
 #define str(s) stringer(s)
   greet = greet + str(SW_VERSION);
-  greet = greet + " on your ";
-  greet = greet + str(HW_NAME);
-  greet = greet + " (";
-  greet = greet + str(HW_VERSION);
+  char hwName[16] = str(HW_NAME);
+  char hwVersion[8] = str(HW_VERSION);
 #undef str
 #undef stringer
   // NOLINTEND
+  Store::forbidden_write("HW_V", hwVersion, true);
+  Store::forbidden_write("HW_N", hwName, true);
+  Store::read("HW_N", hwName);
+  Store::read("HW_V", hwVersion);
+  greet = greet + " on your ";
+  greet = greet + hwName;
+  greet = greet + " (";
+  greet = greet + hwVersion;
   greet = greet + ") in Mapping-Mode ";
   greet = greet + Mapping::ActualMap();
   char serialNumber[12];

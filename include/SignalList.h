@@ -72,6 +72,6 @@
   Signal(Status_OVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  NoRegister,             "Status of the Over Voltage Protection") \
   Signal(Status_LVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  NoRegister,             "Status of the Low Voltage Protection") \
   Signal(AD_C_All,            VirtualAnalogOutput,  "V",  1.0,    0.0,      3*8,  3,      0,        false,  false,  Battery_Voltage,        "Electric potential of all battery cells") \
-  Signal(Soc,                 VirtualAnalogOutput,  "%",  0.01,   0.0,      50,   3,      0,        false,  false,  Battery_SOC,            "State of Charge of the battery")
+  Signal(Soc,                 VirtualAnalogOutput,  "%",  1.0,    0.0,      50,   3,      0,        false,  false,  Battery_SOC,            "State of Charge of the battery")
 // clang-format on
 #endif // SIGNALLIST_H
