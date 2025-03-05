@@ -7,4 +7,4 @@
  *
  */
 #pragma once
-#define HW_VERSION 2.0
+#define HW_VERSION 2.4

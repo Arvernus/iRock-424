@@ -3,8 +3,8 @@
     "cpu": "cortex-m0plus",
     "extra_flags": [
       "-D STM32L073xx",
-      "-I./lib/IROCK_424_V2_0",
-      "-D IROCK_424_V2_0",
+      "-I./lib/IROCK_424_V2_4",
+      "-D IROCK_424_V2_4",
       "-D ENABLE_HWSERIALLP1"
     ],
     "f_cpu": "32000000L",
@@ -37,7 +37,7 @@
   "platforms": [
     "ststm32"
   ],
-  "name": "iRock 424 v2.0",
+  "name": "iRock 424 v2.4",
   "upload": {
     "maximum_ram_size": 20480,
     "maximum_size": 131072,

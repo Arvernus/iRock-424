@@ -19,6 +19,7 @@
  */
 // clang-format off
 #define MappingList \
+    MapPin(0,   MapVar,             PinDip4) \
     MapPin(0,   MapVar,             PinDip3) \
     MapPin(0,   MapVar,             PinDip2) \
     MapPin(0,   MapVar,             PinDip1) \

@@ -10,7 +10,7 @@
  *
  *******************************************************************************
  */
-#if defined(ARDUINO_IROCK_424_V2_0)
+#if defined(ARDUINO_IROCK_424_V2_4)
 #include "pins_arduino.h"
 
 // Pin number

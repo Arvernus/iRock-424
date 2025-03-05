@@ -1,7 +1,7 @@
 {
-    "name": "IROCK_424_V2_0",
+    "name": "IROCK_424_V2_4",
     "version": "1.0.0",
-    "description": "Hardware declaration of iRock 424 V2.0",
+    "description": "Hardware declaration of iRock 424 V2.4",
     "authors": [
         {
             "name": "Joscha Wagner",
