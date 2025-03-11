@@ -1,6 +1,21 @@
 {
     "files.associations": {
         "*.yaml": "home-assistant",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "*.tpp": "cpp",
+        "typeinfo": "cpp",
+        "type_traits": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "valarray": "cpp",
+        "any": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "ratio": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
     }
 }

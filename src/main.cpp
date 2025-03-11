@@ -6,7 +6,8 @@
 #include <CLI.h>
 #include <BatShutoff.h>
 #include <Balancer.h>
-
+#include <ModbusToWorld.h>
+// function to blink LED3
 void blink()
 {
   unsigned int time = 1000;
@@ -17,10 +18,49 @@ void blink()
   Signals::SetDigitalValue(LED3, !Signals::GetDigitalValue(LED3));
   taskManager.scheduleOnce(time, blink);
 }
+// function to calculate the total battery voltage
+void calculateBatteryVoltage()
+{
+  float voltage = 0;
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C1);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C2);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C3);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C4);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C5);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C6);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C7);
+  voltage = voltage + Signals::GetAnalogValue(Signals::SignalId::AD_C8);
+  Signals::SetAnalogValue(AD_C_All, voltage);
+}
+void calculateSoc()
+{
+  float voltage = Signals::GetAnalogValue(Signals::SignalId::AD_C_All) / float(NUMBER_OF_CELLS);
 
+  float Soc;
+
+  if (voltage < 2.8)
+  {
+    Soc = 0.0;
+  }
+  else if (voltage > 3.3)
+  {
+    Soc = 100.0;
+  }
+  else
+  {
+    Soc = ((voltage - 2.8) / 0.5) * 100;
+  }
+  Signals::SetAnalogValue(Signals::SignalId::Soc, Soc);
+}
 // cppcheck-suppress unusedFunction
+
+// Function to setup the system
 void setup()
 {
+  /**
+   * ACHTUNG: hiermit kann das Dateisystem neu angelegt werden.
+   */
+  // Store::reset(true);
   Cli::setup(115200, true, true, true, true);
   Signals::Init();
   // ModBus::setup();
@@ -30,13 +70,19 @@ void setup()
 #define stringer(s) #s
 #define str(s) stringer(s)
   greet = greet + str(SW_VERSION);
-  greet = greet + " on your ";
-  greet = greet + str(HW_NAME);
-  greet = greet + " (";
-  greet = greet + str(HW_VERSION);
+  char hwName[16] = str(HW_NAME);
+  char hwVersion[8] = str(HW_VERSION);
 #undef str
 #undef stringer
   // NOLINTEND
+  Store::forbidden_write("HW_V", hwVersion, true);
+  Store::forbidden_write("HW_N", hwName, true);
+  Store::read("HW_N", hwName);
+  Store::read("HW_V", hwVersion);
+  greet = greet + " on your ";
+  greet = greet + hwName;
+  greet = greet + " (";
+  greet = greet + hwVersion;
   greet = greet + ") in Mapping-Mode ";
   greet = greet + Mapping::ActualMap();
   char serialNumber[12];
@@ -58,13 +104,18 @@ void setup()
     break;
   }
   greet = greet + "\nType 'help' for a list of commands";
-  Cli::start(greet);
+  ModbusToWorld::setup(1, 9600, 100);
   taskManager.yieldForMicros(5000000);
   BatShutoff::setup(1000);
   Balancer::setup(10000, 4, 2000, Balancer::Single);
+  taskManager.scheduleFixedRate(1000, calculateBatteryVoltage);
+  taskManager.scheduleFixedRate(1000, calculateSoc);
+  Cli::start(greet);
 }
 
 // cppcheck-suppress unusedFunction
+
+// Function to loop the system
 void loop()
 {
   taskManager.runLoop();
