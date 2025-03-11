@@ -1,9 +1,9 @@
 /**
  * @file PinList.h
  * @author Joscha Wagner (joscha@nebensound.com)
- * @brief Definition of all Pins for iRock 424 v1.11 hardware
+ * @brief Definition of all Pins for iRock 424 v2.4 hardware
  *
- * Copyright (c) Nebensound GmbH 2023
+ * Copyright (c) Nebensound GmbH 2025
  */
 
 // I2C definitions
@@ -43,6 +43,7 @@
     Pin(PinDip1,            PA15,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 1") \
     Pin(PinDip2,            PA12,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 2") \
     Pin(PinDip3,            PA11,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 3") \
+    Pin(PinDip4,            PC10,       DigitalInputPullUpPin,      1.0,    0.0,    true,   false,  "Dip switch 4") \
     Pin(PinAD_C1,           PA7,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 1 voltage") \
     Pin(PinAD_C2,           PA6,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 2 voltage") \
     Pin(PinAD_C3,           PA5,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 3 voltage") \
@@ -50,13 +51,13 @@
     Pin(PinAD_C5,           PA2,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 5 voltage") \
     Pin(PinAD_C6,           PA0,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 6 voltage") \
     Pin(PinAD_C7,           PC3,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 7 voltage") \
-    Pin(PinAD_C8,           PC0,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
+    Pin(PinAD_C8,           PC1,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
     Pin(PinGPO_LVP,         PC9,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO LVP") \
     Pin(PinGPO_OVP,         PB6,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO UVP") \
     Pin(PinBU_C1,           PA8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 1") \
-    Pin(PinBU_C2,           PC8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 2") \
-    Pin(PinBU_C3,           PC7,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 3") \
-    Pin(PinBU_C4,           PC6,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 4") \
+    Pin(PinBU_C2,           PC7,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 2") \
+    Pin(PinBU_C3,           PC6,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 3") \
+    Pin(PinBU_C4,           PC8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 4") \
     Pin(PinBU_C5,           PB15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 5") \
     Pin(PinBU_C6,           PB2,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 6") \
     Pin(PinBU_C7,           PH1,       DigitalOutputPin,            1.0,    0.0,    false,  false,  "BU Cell 7") \
