@@ -49,6 +49,10 @@
   Signal(MapVar,              MappingVariant,       "",   1.0,    0.0,      0,    10,     0,        false,  false,  NoRegister,             "Variant of the Mapping Table to use") \
   Signal(CPU_TEMP,            CpuTemp,              "C",  1.0,    0.0,      0,    10,     1000,     true,   false,  Temperature_Sensor_1,   "Temperature within the CPU") \
   Signal(VREF_INT,            AnalogIntInput,       "V",  1.0,    0.0,      0,    10,     1000,     false,  false,  NoRegister,             "Electric potential of the constant voltage source within the processor") \
+  Signal(AD_Shunt,            AnalogDiffInput,      "A",  200.0,  0.0,      0,    1,      10,       true,   false,  NoRegister,             "Sum of the current running in in or out of the battery") \
+  Signal(AD_Shunt_FB,         AnalogDiffInput,      "A",  1.0,    0.0,      0,    1,      10,       true,   false,  NoRegister,             "Shunt in the Feedback line") \
+  Signal(Shunt,               DigitalInput,         "",   1.0,    0.0,      0,    10,     10,       false,  false,  NoRegister,             "Current running in or out of the battery") \
+  Signal(AD_VGnd,             AnalogInput,          "V",  1.0,    0.0,      0,    3,      10,       true,   false,  NoRegister,             "Electric potential of virtual ground") \
   Signal(BU_C1,               DigitalOutput,        "",   1.0,    0.0,      0,    10,     200,      false,  false,  Cell_1_Balance_Status,  "Output for balancing unit 1 - True means unit is working") \
   Signal(BU_C2,               DigitalOutput,        "",   1.0,    0.0,      0,    10,     200,      false,  false,  Cell_2_Balance_Status,  "Output for balancing unit 2 - True means unit is working") \
   Signal(BU_C3,               DigitalOutput,        "",   1.0,    0.0,      0,    10,     200,      false,  false,  Cell_3_Balance_Status,  "Output for balancing unit 3 - True means unit is working") \
@@ -71,6 +75,7 @@
   Signal(Status_FinalSO,      VirtualDigitalOutput, "",   1.0,    0.0,      0,    10,     0,        false,  false,  NoRegister,             "Status of the Final Shut Off") \
   Signal(Status_OVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  NoRegister,             "Status of the Over Voltage Protection") \
   Signal(Status_LVP,          DigitalOutput,        "",   1.0,    0.0,      1,    10,     0,        false,  false,  NoRegister,             "Status of the Low Voltage Protection") \
+  Signal(Alarm,               DigitalOutput,        "",   1.0,    0.0,      0,    10,     0,        false,  false,  NoRegister,             "Alarm Signal") \
   Signal(AD_C_All,            VirtualAnalogOutput,  "V",  1.0,    0.0,      3*8,  3,      0,        false,  false,  Battery_Voltage,        "Electric potential of all battery cells") \
   Signal(Soc,                 VirtualAnalogOutput,  "%",  1.0,    0.0,      50,   3,      0,        false,  false,  Battery_SOC,            "State of Charge of the battery")
 // clang-format on

@@ -59,8 +59,8 @@
     Pin(PinBU_C4,           PC6,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 4") \
     Pin(PinBU_C5,           PB15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 5") \
     Pin(PinBU_C6,           PB2,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 6") \
-    Pin(PinBU_C7,           PH1,       DigitalOutputPin,            1.0,    0.0,    false,  false,  "BU Cell 7") \
-    Pin(PinBU_C8,           PH0,       DigitalOutputPin,            1.0,    0.0,    false,  false,  "BU Cell 8") \
+    Pin(PinBU_C7,           PH1,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 7") \
+    Pin(PinBU_C8,           PH0,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 8") \
     Pin(PinLED1,            PC13,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 1") \
     Pin(PinLED2,            PC14,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 2") \
     Pin(PinLED3,            PC15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 3")

@@ -54,15 +54,19 @@
     Pin(PinAD_C8,           PC1,        AnalogInputPin,             2.0,    0.0,    false,  false,  "Cell 8 voltage") \
     Pin(PinGPO_LVP,         PC9,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO LVP") \
     Pin(PinGPO_OVP,         PB6,        DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO UVP") \
+    Pin(PinGPO_Alarm,       PC11,       DigitalOutputPin,           1.0,    0.0,    true,   false,  "GPO Alarm") \
     Pin(PinBU_C1,           PA8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 1") \
     Pin(PinBU_C2,           PC7,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 2") \
     Pin(PinBU_C3,           PC6,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 3") \
     Pin(PinBU_C4,           PC8,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 4") \
     Pin(PinBU_C5,           PB15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 5") \
     Pin(PinBU_C6,           PB2,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 6") \
-    Pin(PinBU_C7,           PH1,       DigitalOutputPin,            1.0,    0.0,    false,  false,  "BU Cell 7") \
-    Pin(PinBU_C8,           PH0,       DigitalOutputPin,            1.0,    0.0,    false,  false,  "BU Cell 8") \
+    Pin(PinBU_C7,           PH1,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 7") \
+    Pin(PinBU_C8,           PH0,        DigitalOutputPin,           1.0,    0.0,    false,  false,  "BU Cell 8") \
     Pin(PinLED1,            PC13,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 1") \
     Pin(PinLED2,            PC14,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 2") \
-    Pin(PinLED3,            PC15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 3")
+    Pin(PinLED3,            PC15,       DigitalOutputPin,           1.0,    0.0,    false,  false,  "LED 3") \
+    Pin(PinShunt,           PC5,        AnalogInputPin,             1.0,    0.0,    false,  false,  "Shunt") \
+    Pin(PinFBShunt,         PA1,        AnalogInputPin,             1.0,    0.0,    false,  false,  "Feedback Shunt") \
+    Pin(PinV_GND,           PC0,        AnalogInputPin,             1.0,    0.0,    true,   false,  "Virtual Ground")
 // clang-format on
